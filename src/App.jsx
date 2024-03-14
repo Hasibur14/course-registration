@@ -7,8 +7,8 @@ function App() {
 
   return (
     <>
-      <div className='lg:p-10'>
-        <div className='items-center justify-center '>
+      <div className='lg:p-10 space-y-10'>
+        <div className='items-center justify-center mx-auto lg:ml-96'>
           <h2 className='text-5xl text-primary font-bold '>Course Registration</h2>
         </div>
 
