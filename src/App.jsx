@@ -1,9 +1,18 @@
+import { useState } from 'react'
 import './App.css'
 import Cart from './assets/components/Cart/Cart'
 import Courses from './assets/components/Courses/Courses'
 
 
 function App() {
+
+  const [cart, setCart] = useState([])
+
+const handleCourseSelection = course => {
+    const newCart = [...cart, course]
+  setCart(newCart)
+}
+
 
   return (
     <>
@@ -14,10 +23,10 @@ function App() {
 
         <div className='grid grid-cols-12'>
           <div className='col-span-10'>
-            <Courses></Courses>
+            <Courses handleCourseSelection ={ handleCourseSelection }></Courses>
           </div>
           <div className='col-span-2'>
-            <Cart></Cart>
+            <Cart cart={cart}></Cart>
           </div>
         </div>
 
